@@ -1,0 +1,25 @@
+recouvrement_user_homepage:
+    path:     /
+    defaults: { _controller: RecouvrementUserBundle:Default:index }
+recouvrement_user_admin_acceuil:
+    path:     /admin/acceuil
+    defaults: { _controller: RecouvrementUserBundle:Admin:acceuil }
+recouvrement_user_admin_consulter:
+    path:     /admin/consulter
+    defaults: { _controller: RecouvrementUserBundle:Admin:consulter }
+recouvrement_user_admin_ajouter:
+    path:     /admin/ajouter
+    defaults: { _controller: RecouvrementUserBundle:Admin:ajouter }
+recouvrement_user_admin_show:
+    path:     /admin/show
+    defaults: { _controller: RecouvrementUserBundle:Admin:show }
+
+recouvrement_user_marketeur:
+    path:     /marketeur
+    defaults: { _controller: RecouvrementUserBundle:Default:marketeur }
+recouvrement_user_commercial:
+    path:     /commercial
+    defaults: { _controller: RecouvrementUserBundle:Default:commercial }
+recouvrement_user_recouvreur:
+    path:     /recouvreur
+    defaults: { _controller: RecouvrementUserBundle:Default:recouvreur }

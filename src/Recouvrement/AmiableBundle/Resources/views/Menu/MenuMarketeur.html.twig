@@ -1,0 +1,25 @@
+{#{% block menu %}#}
+{% if app.request.get('_route') == "recouvrement_amiable_marketeur_acceuil" %}
+<li class="active">
+{% else %}
+<li>
+    {% endif %}
+    <a href="{{ path('recouvrement_amiable_marketeur_acceuil') }}"><span class="fa fa-home"></span> <span class="xn-text">Acceuil</span></a>
+</li>
+{% if app.request.get('_route') == "recouvrement_amiable_marketeur_ajouterCltPros" %}
+<li class="active">
+{% else %}
+<li>
+    {% endif %}
+    <a href="{{ path('recouvrement_amiable_marketeur_ajouterCltPros') }}"><span class="glyphicon glyphicon-plus-sign"></span> <span class="xn-text">Ajouter client prospecté</span></a>
+</li>
+{% if app.request.get('_route') == "recouvrement_amiable_marketeur_consulterCltPros" %}
+<li class="active">
+{% else %}
+<li>
+    {% endif %}
+    <a href="{{ path('recouvrement_amiable_marketeur_consulterCltPros') }}"><span class="glyphicon glyphicon-list"></span> <span class="xn-text">Consulter client prospecté</span></a>
+</li>
+
+
+{#{% endblock %}#}

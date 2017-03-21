@@ -1,0 +1,174 @@
+{% extends "@RecouvrementAmiable/layoutMarketeur.html.twig" %}
+
+{% block page_content %}
+    {{ parent() }}
+    <br><br>
+    <div class="page-content-wrap">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <form class="form-horizontal">
+
+                    <div class="panel panel-default tabs">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#tab-first" role="tab" data-toggle="tab">Information Client</a>
+                            </li>
+                            <li><a href="#tab-second" role="tab" data-toggle="tab">Contact et RDV</a></li>
+                        </ul>
+                        <div class="panel-body tab-content">
+                            <div class="tab-pane active" id="tab-first">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Client"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Teléphone"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value="" placeholder="Fax"/>
+
+                                                    {#<input type="text" class="form-control datepicker" value="" placeholder="Date de naissance">#}
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Email"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Portable"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Adresse"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Activité"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Responsable"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value="" placeholder="PDG"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <div class="col-md-6 col-xs-12">
+                                                        <label class="check"><input type="checkbox" class="icheckbox"
+                                                                                    checked="checked"/> Contact</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="tab-second">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <select class="form-control select">
+                                                        <option disabled="disabled" selected>Sort</option>
+                                                        <option>intéressé</option>
+                                                        <option>non intéressé</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value="" placeholder="Impayes"/>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <select class="form-control select">
+                                                        <option disabled="disabled" selected>Statut actuel</option>
+                                                        <option>Marketeur</option>
+                                                        <option>Commercial</option>
+                                                        <option>Recouvreur</option>
+                                                        <option>Chargé enquête</option>
+                                                        <option>Chargé juridique</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control datepicker" value="" placeholder="Date RDV">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row" >
+                                    <div class="col-md-12">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-11">
+                                                    <textarea class="form-control" rows="5" placeholder="Description"></textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-primary pull-right">Save Changes <span
+                                        class="fa fa-floppy-o fa-right"></span></button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

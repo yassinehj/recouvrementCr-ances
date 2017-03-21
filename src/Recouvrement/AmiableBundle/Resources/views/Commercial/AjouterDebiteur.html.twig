@@ -1,0 +1,339 @@
+{% extends "@RecouvrementAmiable/layoutCommercial.html.twig" %}
+{% block page_content %}
+    {{ parent() }}
+    <br><br>
+    <center><h2>Ajouter Debiteur</h2></center>
+    <div class="page-content-wrap">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <form class="form-horizontal">
+
+                    <div class="panel panel-default tabs">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#tab-first" role="tab" data-toggle="tab">Identification</a>
+                            </li>
+                            <li><a href="#tab-second" role="tab" data-toggle="tab">Dirigeants</a></li>
+                            <li><a href="#tab-3" role="tab" data-toggle="tab">Activité</a></li>
+                            <li><a href="#tab-4" role="tab" data-toggle="tab">Elements financiers</a></li>
+                        </ul>
+                        <div class="panel-body tab-content">
+                            <div class="tab-pane active" id="tab-first">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <select class="form-control select">
+                                                        <option>Moral</option>
+                                                        <option>Physique</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Nom/Raison social"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Adresse"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <select class="form-control select">
+                                                        <option disabled="disabled" selected>Ville</option>
+                                                        <option>Tunis</option>
+                                                        <option>Ariana</option>
+                                                        <option>Manouba</option>
+                                                        <option>Ben Arous</option>
+                                                        <option>Nabeul</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Code Postal"/>
+
+                                                    {#<input type="text" class="form-control datepicker" value="" placeholder="Date de naissance">#}
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Télephone"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Fax"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="N° registre du commerce"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Code en douane"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Matricule Fiscale"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Forme juridique"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Capital"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="tab-second">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Président Directeur Général"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Directeur Général Adjoint"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Directeur Financier"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Directeur commercial"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Vis-à-vis avec ELKARAMA"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Son qualité"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Tél"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Fax"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Description"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Secteur d'activité"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Marques"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Nom groupe"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Autre Affaire"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <i class="fa fa-plus-square fa-2x"></i>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+                                <div class="row" id='demande'>
+                                    <div class="col-md-6">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="banque"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="RIB"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <i class="fa fa-plus-square fa-2x" onclick="plus()"></i>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="block">
+
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Bien immobilier"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Situation juridique"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="block">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Bien mobilier"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control" value=""
+                                                           placeholder="Situation juridique"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <button class="btn btn-primary pull-right">Save Changes <span
+                                            class="fa fa-floppy-o fa-right"></span></button>
+                            </div>
+                        </div>
+</div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        function plus()
+
+        {
+
+            document.getElementById('demande').innerHTML += '<div class="col-md-6"> <div class="block"> <div class="form-group"> <div class="col-md-10"> <input type="text" class="form-control" value="" placeholder="banque"/> </div> </div> </div> </div> <div class="col-md-5"> <div class="block"> <div class="form-group"> <div class="col-md-12"> <input type="text" class="form-control" value="" placeholder="RIB"/> </div> </div> </div> </div> '
+
+        }
+
+    </script>
+{% endblock %}

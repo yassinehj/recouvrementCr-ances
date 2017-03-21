@@ -1,0 +1,37 @@
+
+#marketeur
+recouvrement_amiable_marketeur_acceuil:
+    path:     /marketeur/acceuil
+    defaults: { _controller: RecouvrementAmiableBundle:Marketeur:acceuil }
+recouvrement_amiable_marketeur_ajouterCltPros:
+    path:     /marketeur/ajouterCltPros
+    defaults: { _controller: RecouvrementAmiableBundle:Marketeur:ajouterCltPros }
+recouvrement_amiable_marketeur_consulterCltPros:
+    path:     /marketeur/consulterCltPros
+    defaults: { _controller: RecouvrementAmiableBundle:Marketeur:consulterCltPros }
+#commercial
+recouvrement_amiable_commercial_acceuil:
+    path:     /commercial/acceuil
+    defaults: { _controller: RecouvrementAmiableBundle:Commercial:acceuilCommercial }
+recouvrement_amiable_commercial_consulterCltPros:
+    path:     /commercial/consulterCltPros
+    defaults: { _controller: RecouvrementAmiableBundle:Commercial:consulterCltProsCommercial }
+recouvrement_amiable_commercial_consulterClient:
+    path:     /commercial/consulterClient
+    defaults: { _controller: RecouvrementAmiableBundle:Commercial:consulterClientCommercial }
+recouvrement_amiable_commercial_ajouterClient:
+    path:     /commercial/ajouterClient
+    defaults: { _controller: RecouvrementAmiableBundle:Commercial:ajouterClient }
+recouvrement_amiable_commercial_ajouterDebiteur:
+    path:     /commercial/ajouterDebiteur
+    defaults: { _controller: RecouvrementAmiableBundle:Commercial:ajouterDebiteur }
+recouvrement_amiable_commercial_ajouterDocument:
+    path:     /commercial/ajouterDocument
+    defaults: { _controller: RecouvrementAmiableBundle:Commercial:ajouterDocument }
+recouvrement_amiable_commercial_test:
+    path:     /commercial/test
+    defaults: { _controller: RecouvrementAmiableBundle:Commercial:test }
+#recouvreur
+recouvrement_amiable_recouvreur_acceuil:
+    path:     /recouvreur/acceuil
+    defaults: { _controller: RecouvrementAmiableBundle:Recouvreur:acceuilRecouvreur }

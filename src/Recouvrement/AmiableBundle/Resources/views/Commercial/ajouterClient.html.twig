@@ -1,0 +1,129 @@
+{% extends "@RecouvrementAmiable/layoutCommercial.html.twig" %}
+
+{% block page_content %}
+    {{ parent() }}
+    <br><br>
+    <div class="page-content-wrap">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-horizontal">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>Ajouter client</strong></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Client"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <select class="form-control select">
+                                                    <option disabled="disabled" selected>Maniére de contact</option>
+                                                    <option>Facebook</option>
+                                                    <option>Amis</option>
+                                                    <option>Publicité</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Cin"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Email"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Teléphone"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Adresse"/>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Email"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control datepicker" value="" placeholder="Date de contact">
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Forme juridique"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Activité"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Responsable"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Impayes"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <select class="form-control select">
+                                                    <option disabled="disabled" selected>Nature support</option>
+                                                    <option>chéque</option>
+                                                    <option>facture</option>
+                                                    <option>Recouvreur</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Nombre de debiteur"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control datepicker" value="" placeholder="Date de créance">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Action prise avec le debiteur"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-default">Clear Form</button>
+                        <button class="btn btn-primary pull-right">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

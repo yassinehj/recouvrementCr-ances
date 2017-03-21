@@ -1,0 +1,183 @@
+{% extends "@RecouvrementUser/layoutAdmin.html.twig" %}
+
+{% block page_content %}
+    {{ parent() }}
+
+    <br><br>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Utilisateurs</h3>
+        {#<div class="pull-right">#}
+
+        {#<input class="btn btn-info toggle"  > <i class="fa fa-plus-square"></i> Ajouter</input>#}
+        {#</div>#}
+        <div class="pull-right">
+            <button><a href="{{ path('recouvrement_user_admin_ajouter') }}"><span class="fa fa-plus-square"></span>
+                    <span class="xn-text">Ajouter</span></a></button>
+        </div>
+        <div class="panel-body">
+            <table class="table datatable">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Télephone</th>
+                    <th>Date de naissance</th>
+                    <th>Contrat</th>
+                    <th>role</th>
+                    <th>option</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>tiger@gmail.com</td>
+                    <td>20548795</td>
+                    <td>2011/04/25</td>
+                    <td>CDI</td>
+                    <td>Recouvreur</td>
+                    <td>
+                        <button class="btn btn-success btn-rounded">
+                            <i class="fa fa-pencil-square-o"></i></button>
+                        <a href="#" class="mb-control" data-box="#mb-signout">
+                            <button class="btn btn-danger btn-rounded">
+                                <i class="fa fa-trash-o"></i></button>
+                        </a>
+                        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+                            <div class="mb-container">
+                                <div class="mb-middle">
+                                    <div class="mb-title"><span class="fa fa-trash-o"></span> <strong>Are you sure you
+                                            want to delete ?</strong></div>
+                                    <div class="mb-content">
+                                        {#<p>Are you sure you want to delete ?</p>#}
+                                        <p>Press No if youwant to continue work. Press Yes to delete this user.</p>
+                                    </div>
+                                    <div class="mb-footer">
+                                        <div class="pull-right">
+                                            <a href="{{ path('fos_user_security_logout') }}"
+                                               class="btn btn-success btn-lg">Yes</a>
+                                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <button class="btn btn-default btn-rounded" data-toggle="modal" data-target="#modal_basic">
+                                <i class="glyphicon glyphicon-search"></i></button>
+                        </a>
+
+                        <div class="modal" id="modal_basic" tabindex="-1" role="dialog" aria-labelledby="defModalHead"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span
+                                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                        </button>
+                                        <h4 class="modal-title" id="defModalHead">Utilisateur</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="timeline-body">
+                                            <img src="{{ asset('bundles/assets/images/gallery/nature-6.jpg') }}"
+                                                 width="200" class="img-text" align="left"/>
+                                            <p>Nom: Tiger Nixon</p>
+                                            <p>Email: tiger@gmail.com</p>
+                                            <p>Teléphone: 20548795</p>
+                                            <p>Date de naissance: 2011/04/25</p>
+                                            <p>Contrat: CDI</p>
+                                            <p>Role: Recouvreur</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {#</li></ul>#}
+                    </td>
+                </tr>
+                {#<tr>#}
+                {#<td>Garrett Winters</td>#}
+                {#<td>Accountant@gmail.com</td>#}
+                {#<td>25144896</td>#}
+                {#<td>2011/07/25</td>#}
+                {#<td>CVP</td>#}
+                {#<td>Commercial</td>#}
+                {#<td><button class="btn btn-success btn-rounded" >#}
+                {#<i class="fa fa-pencil-square-o"></i></button><button class="btn btn-danger btn-rounded" >#}
+                {#<i class="fa fa-trash-o"></i></button><button class="btn btn-default btn-rounded" >#}
+                {#<i class="glyphicon glyphicon-search"></i></button></td>#}
+                {#</tr>#}
+
+
+                {#<tr>#}
+                {#<td>Brielle Williamson</td>#}
+                {#<td>Integration@gmail.com</td>#}
+                {#<td>45884556</td>#}
+                {#<td>2012/12/02</td>#}
+                {#<td>CDI</td>#}
+                {#<td>Chargé enquete</td>#}
+                {#<td><button class="btn btn-success btn-rounded" >#}
+                {#<i class="fa fa-pencil-square-o"></i></button><button class="btn btn-danger btn-rounded" >#}
+                {#<i class="fa fa-trash-o"></i></button><button class="btn btn-default btn-rounded" >#}
+                {#<i class="glyphicon glyphicon-search"></i></button></td>#}
+                {#</tr>#}
+                {#<tr>#}
+                {#<td>Herrod Chandler</td>#}
+                {#<td>Sales Assistant</td>#}
+                {#<td>San Francisco</td>#}
+                {#<td>59</td>#}
+                {#<td>2012/08/06</td>#}
+                {#<td>$137,500</td>#}
+                {#<td><button class="btn btn-success btn-rounded" >#}
+                {#<i class="fa fa-pencil-square-o"></i></button><button class="btn btn-danger btn-rounded" >#}
+                {#<i class="fa fa-trash-o"></i></button><button class="btn btn-default btn-rounded" >#}
+                {#<i class="glyphicon glyphicon-search"></i></button></td>#}
+                {#</tr>#}
+                {#<tr>#}
+                {#<td>Rhona Davidson</td>#}
+                {#<td>Integration Specialist</td>#}
+                {#<td>Tokyo</td>#}
+                {#<td>55</td>#}
+                {#<td>2010/10/14</td>#}
+                {#<td>$327,900</td>#}
+                {#<td><button class="btn btn-success btn-rounded" >#}
+                {#<i class="fa fa-pencil-square-o"></i></button><button class="btn btn-danger btn-rounded" >#}
+                {#<i class="fa fa-trash-o"></i></button><button class="btn btn-default btn-rounded" >#}
+                {#<i class="glyphicon glyphicon-search"></i></button></td>#}
+                {#</tr>#}
+                {#<tr>#}
+                {#<td>Colleen Hurst</td>#}
+                {#<td>Javascript Developer</td>#}
+                {#<td>San Francisco</td>#}
+                {#<td>39</td>#}
+                {#<td>2009/09/15</td>#}
+                {#<td>$205,500</td>#}
+                {#<td><button class="btn btn-success btn-rounded" >#}
+                {#<i class="fa fa-pencil-square-o"></i></button><button class="btn btn-danger btn-rounded" >#}
+                {#<i class="fa fa-trash-o"></i></button><button class="btn btn-default btn-rounded" >#}
+                {#<i class="glyphicon glyphicon-search"></i></button></td>#}
+                {#</tr>#}
+                {#<tr>#}
+                {#<td>Sonya Frost</td>#}
+                {#<td>Software Engineer</td>#}
+                {#<td>Edinburgh</td>#}
+                {#<td>23</td>#}
+                {#<td>2008/12/13</td>#}
+                {#<td>$103,600</td>#}
+                {#<td><button class="btn btn-success btn-rounded" >#}
+                {#<i class="fa fa-pencil-square-o"></i></button><button class="btn btn-danger btn-rounded" >#}
+                {#<i class="fa fa-trash-o"></i></button><button class="btn btn-default btn-rounded" >#}
+                {#<i class="glyphicon glyphicon-search"></i></button></td>#}
+                {#</tr>#}
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

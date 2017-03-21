@@ -1,0 +1,88 @@
+{% extends "@RecouvrementAmiable/layoutCommercial.html.twig" %}
+
+{% block page_content %}
+    {{ parent() }}
+    <br><br>
+    <div class="page-content-wrap">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-horizontal">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>Ajouter Document</strong></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="Yassine" placeholder="Client"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="document">
+                                <div class="col-md-6">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control" value="" placeholder="Type"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-4">
+                                                <label class="check"><input type="radio" class="iradio" name="iradio"/> Default</label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="check"><input type="radio" class="iradio" name="iradio" checked="checked"/> Checked</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input type="file" class="fileinput btn-default" name="filename2" id="filename2" title="image Document"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-1">
+                                                <i class="fa fa-plus-square fa-2x" onclick="plusdocument()"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-default">Clear Form</button>
+                        <button class="btn btn-primary pull-right">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function plusdocument()
+
+        {
+
+            document.getElementById('document').innerHTML += '<div class="row"><div class="col-md-6"><div class="block"><div class="form-group"><div class="col-md-10"><input type="text" class="form-control" value="" placeholder="Type"/></div></div></div></div><div class="col-md-2"><div class="block"><div class="form-group"><div class="col-md-4"><label class="check"><input type="radio" /> Default</label></div><div class="col-md-4"><label class="check"><input type="radio" class="iradio" name="iradio" checked="checked"/> Checked</label></div></div></div></div><div class="col-md-2"><div class="block"><div class="form-group"><div class="col-md-10"><input type="file" class="fileinput btn-default" name="filename2" id="filename2" title="image Document"/></div></div></div></div> </div>'
+
+        }
+
+    </script>
+{% endblock %}

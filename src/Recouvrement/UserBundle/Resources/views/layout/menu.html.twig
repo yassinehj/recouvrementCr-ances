@@ -1,0 +1,18 @@
+{#{% block menu %}#}
+{% if app.request.get('_route') == "recouvrement_user_admin_acceuil" %}
+<li class="active">
+{% else %}
+<li>
+    {% endif %}
+    <a href="{{ path('recouvrement_user_admin_acceuil') }}"><span class="fa fa-home"></span> <span class="xn-text">Acceuil</span></a>
+</li>
+{% if app.request.get('_route') == "recouvrement_user_admin_consulter" %}
+<li class="active">
+{% else %}
+<li>
+    {% endif %}
+    <a href="{{ path('recouvrement_user_admin_consulter') }}"><span class="fa fa-users"></span> <span class="xn-text">Utilisateur</span></a>
+</li>
+
+
+{#{% endblock %}#}

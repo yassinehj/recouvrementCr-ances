@@ -1,0 +1,4 @@
+services:
+    redirect.after.login:
+        class: Recouvrement\UserBundle\Redirection\AfterLoginRedirection
+        arguments: ['@router']

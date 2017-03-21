@@ -1,0 +1,162 @@
+{% extends "@RecouvrementUser/layoutAdmin.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block page_content %}
+    {{ parent() }}
+    <br><br>
+
+
+    {#{{ form_start(form, {'method': 'post', 'attr': {'class': 'fos_user_registration_register'}}) }}#}
+    {#{{ form_label(form.username) }}#}
+    {#{{ form_widget(form.username) }}#}
+    {#{{ form_label(form.email) }}#}
+    {#{{ form_widget(form.email) }}#}
+    {#{{ form_widget(form.plainPassword) }}#}
+    {#<div class="form-group">#}
+    {#{{ form_widget(form.tel) }}</div>#}
+    {#{{ form_widget(form.NomPrenom) }}#}
+    {#{{ form_widget(form.cin) }}#}
+    {#{{ form_widget(form.dateNaissance) }}#}
+    {#{{ form_widget(form.lieuNaissance) }}#}
+    {#{{ form_widget(form.adresse) }}#}
+    {#{{ form_widget(form.image) }}#}
+    {#{{ form_widget(form.roles) }}#}
+    {#{{ form_widget(form.tel) }}#}
+
+    {#<div>#}
+        {#<input type="submit" value="{{ 'registration.submit'|trans }}" />#}
+    {#</div>#}
+    {#{{ form_end(form) }}#}
+    <div class="page-content-wrap">
+        <div class="row">
+            <div class="col-md-12">
+                {#<form class="form-horizontal">#}
+                    {{ form_start(form, {'method': 'post', 'attr': {'class': 'fos_user_registration_register form-horizontal'}}) }}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>Ajouter utilisateur</strong></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.NomPrenom,{ 'attr': {'class': 'form-control','placeholder' : 'Nom Prenom'} }) }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.cin,{ 'attr': {'class': 'form-control','placeholder' : 'Cin'} }) }}
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.dateNaissance,{ 'attr': {'class': 'form-control datepicker','placeholder':'Date de naissance'} }) }}
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.lieuNaissance,{ 'attr': {'class': 'form-control','placeholder' : 'Lieu de naissance'} }) }}
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.email,{ 'attr': {'class': 'form-control','placeholder' : 'Email'} }) }}
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.tel,{ 'attr': {'class': 'form-control','placeholder' : 'Teléphone'} }) }}
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="block">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.adresse,{ 'attr': {'class': 'form-control','placeholder' : 'Adresse'} }) }}
+
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.username,{ 'attr': {'class': 'form-control','placeholder' : 'Login'} }) }}
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.plainPassword.first,{ 'attr': {'class': 'form-control','placeholder' : 'password'} }) }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.plainPassword.second,{ 'attr': {'class': 'form-control','placeholder' : 'Repeat password'} }) }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                {{ form_widget(form.roles,{ 'attr': {'class': 'form-control select','placeholder' : 'role'} }) }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            {#<label class="col-md-2 control-label"></label>#}
+                                            <div class="col-md-10">
+                                                {#<label class="btn btn-default btn-file">#}
+                                                    {{ form_widget(form.image) }}
+                                                {#</label>#}
+                                                {#{{ form_widget(form.image,{ 'attr': {'class': 'btn-success'} }) }}#}
+                                                {#<input type="file" class="fileinput btn-facebook" name="filename2" id="filename2" title="Image"/>#}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-default">Clear Form</button>
+                        <input type="submit" value="{{ 'registration.submit'|trans }}" class="btn btn-primary pull-right"/>
+
+                        {#<button class="btn btn-primary pull-right">Submit</button>#}
+                    </div>
+                {#</form>#}
+                {{ form_rest(form) }}
+                {{ form_end(form, {'render_rest': false}) }}
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#file-simple").fileinput({
+                showUpload: false,
+                showCaption: false,
+                browseClass: "btn btn-danger",
+                fileType: "any"
+            });
+            $("#filetree").fileTree({
+                root: '/',
+                script: 'assets/filetree/jqueryFileTree.php',
+                expandSpeed: 100,
+                collapseSpeed: 100,
+                multiFolder: false
+            }, function(file) {
+                alert(file);
+            }, function(dir){
+                setTimeout(function(){
+                    page_content_onresize();
+                },200);
+            });
+        });
+    </script>
+{% endblock %}

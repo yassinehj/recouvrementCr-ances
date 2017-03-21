@@ -1,0 +1,41 @@
+{#{% block menu %}#}
+{% if app.request.get('_route') == "recouvrement_amiable_commercial_acceuil" %}
+<li class="active">
+{% else %}
+<li>
+    {% endif %}
+    <a href="{{ path('recouvrement_amiable_commercial_acceuil') }}"><span class="fa fa-home"></span> <span class="xn-text">Acceuil</span></a>
+</li>
+{% if app.request.get('_route') == "recouvrement_amiable_commercial_consulterCltPros" %}
+<li class="active">
+{% else %}
+<li>
+    {% endif %}
+    <a href="{{ path('recouvrement_amiable_commercial_consulterCltPros') }}"><span class="fa fa-users"></span> <span class="xn-text">Client prospecté</span></a>
+</li>
+{#{% if app.request.get('_route') == "recouvrement_amiable_marketeur_consulterCltPros" %}#}
+{#<li class="active">#}
+{#{% else %}#}
+{#<li>#}
+    {#{% endif %}#}
+    {#<a href="{{ path('recouvrement_amiable_marketeur_consulterCltPros') }}"><span class="glyphicon glyphicon-folder-open"></span> <span class="xn-text">Dossier</span></a>#}
+{#</li>#}
+<li class="xn-openable">
+    <a href="#"><span class="glyphicon glyphicon-folder-open"></span> <span class="xn-text">Dossier</span></a>
+    <ul>
+        {% if app.request.get('_route') == "recouvrement_amiable_commercial_consulterClient" %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+        <a href="{{ path('recouvrement_amiable_commercial_consulterClient') }}"><i class="fa fa-users"></i>Clients</a>
+        </li>
+        <li><a href="layout-nav-toggled.html"><i class="fa fa-copy"></i>Documents</a></li>
+        <li><a href="layout-nav-top.html"><i class="fa fa-group"></i>Debiteur</a></li>
+        <li><a href="layout-nav-right.html"><i class="fa fa-paste"></i>Bordereaux transmission</a></li>
+
+    </ul>
+</li>
+
+
+{#{% endblock %}#}
